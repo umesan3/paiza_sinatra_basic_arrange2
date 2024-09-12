@@ -1,0 +1,17 @@
+<h1>paiza memo</h1>
+
+<p><a href='/posts/new'>新規メモ</a>|<a href='/users/new'>新規ユーザー</a></p>
+
+<table>
+    <tr>
+        <th>Id</th><th>タイトル</th><th>ユーザーID</th><th>ユーザー</th>
+    </tr>
+    <% @posts.each do |post| %>
+        <tr>
+            <td><%= post.id %></td>
+            <td><a href='/posts/get/<%= post.id %>'><%= post.title %></a></td>
+            <td><%=post.user_id %></td>
+            <td><%= post.user.name %></td>
+        </tr>
+    <% end %>
+</table>

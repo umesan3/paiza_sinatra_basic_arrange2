@@ -1,0 +1,5 @@
+<p>タイトル：<%= @post.title %></p>
+
+<%= @markdown.render(@post.content) %>
+
+<p><a href='/'>一覧に戻る</a> | <a href='/posts/edit/<%= @post.id %>'>編集</a> | <a href='/posts/delete/<%= @post.id %>'>削除</a></p>

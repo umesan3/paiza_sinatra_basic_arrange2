@@ -1,0 +1,12 @@
+<h1><%= @post.title %>を編集</h1>
+
+<form action="/posts/patch/<%= @post.id %>" method="post">
+    <label for="title">タイトル</label><br>
+    <input type="text" name="title" value="<%= @post.title %>">
+    <p></p>
+    <label for="content">本文</label><br>
+    <textarea name="content" cols="40" rows="10"><%= @post.content %></textarea>
+    <p></p>
+    <button type="submit">更新する</button>
+    <a href='/posts/get/<%= @post.id %>'>キャンセル</a>
+</form>
